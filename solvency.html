@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head id = "solvency">
+  <table>
+    	<tr>
+    		<a href= "./homepage.html"<td>Home</td></a>
+   		</tr>
+    </table>
+  <h1>Solvency Ratios</h1>
+</head>
+<body>
+
+  <section id="DebtToEquityRATIO">
+  <h3>Debt to Equity Ratio</h3>
+  <h4>Debt to Equity Ratio = Total Debt / Equity(Shareholder's Fund)<h5>
+    <form>
+        <h4>Total Debt?</h4>
+        <input type="number" id="totalDebt"=></input><br>
+        <h4>Total Equity (Shareholder's Fund)?</h4>
+        <input type="number" id="totalEquity" => </input>
+    </form>
+  <p>The Debt to Equity Ratio is :
+  <span id = "DEBTTOEQUITYRATIO"></span>
+    <button onclick="debtToEquityRatio(totalDebt,totalEquity)">Submit</button>
+  </section>
+
+  <section id="DebtToAssetsRATIO">
+  <h3>Debt to Assets Ratio</h3>
+  <h4>Debt to Assets Ratio = Total Debt / Total Assets)<h5>
+    <form>
+        <h4>Total Debt?</h4>
+        <input type="number" id="TotalDebt"=></input><br>
+        <h4>Total Assets?</h4>
+        <input type="number" id="totalAssets" => </input>
+    </form>
+  <p>The Debt to Equity Ratio is :
+  <span id = "DEBTTOASSETSRATIO"></span>
+    <button onclick="debtToAssetsRatio(TotalDebt,totalAssets)">Submit</button>
+  </section>
+
+
+    <script>
+        function debtToEquityRatio()
+        {
+          td = document.getElementById("totalDebt").value;
+          te = document.getElementById("totalEquity").value;
+          document.getElementById("DEBTTOEQUITYRATIO").innerHTML = td / te;
+        }
+
+        function debtToAssetsRatio()
+        {
+          tD = document.getElementById("TotalDebt").value;
+          ta = document.getElementById("totalAssets").value;
+          document.getElementById("DEBTTOASSETSRATIO").innerHTML = tD / ta;
+        }
+
+    </script>
+</html>

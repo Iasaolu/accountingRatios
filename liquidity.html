@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- put in message when text is put in rather than number--!>
+<html>
+<head id = "liquidity">
+  <table>
+      <tr>
+        <a href= "./homepage.html"<td>Home</td></a>
+      </tr>
+  </table>
+  <h1>Liquidity Ratios</h1>
+</head>
+<body>
+
+  <section id="currentRATIO">
+  <h3>Current Ratio</h3>
+  <h4>Current ratio = Current Assets / Current Liabilities<h5>
+    <form>
+        <h4>Total Current assets?</h4>
+        <input type="number" id="currentAssets"=></input><br>
+        <h4>Total Current Liabilities?</h4>
+        <input type="number" id="currentLiabilities"=></input>
+    </form>
+  <p>The current ratio is :
+  <span id = "CURRENTRATIO"></span>
+    <button onclick="currentRatio(currentAssets,currentLiabilities)">Submit</button>
+  </section>
+
+    <section id = "workingCAPITAL">
+    <h3>Net-Working Capital</h3>
+    <h4>Net-Working Capital = Current Assets - Current Liabilities</h4>
+      <form>
+          <h4>Total Current Assets?</h4>
+          <input type="number" id="CurrentAssets"=></input><br>
+          <h4>Total Current Liabilities?</h4>
+          <input type="number" id="currentlIabilities"=></input>
+      </form>
+    <p>The quick ratio is :
+    <span id = "WORKINGCAPITAL"></span>
+      <button onclick="workingCapital(CurrentAssets,currentlIabilities)">Submit</button>
+    </section>
+
+      <section id = "quickRATIO">
+      <h3>Quick Ratio</h3>
+      <h4>Quick Ratio = Quick Assets / Current Liabilities</h4>
+      <h5>Quick Assets = (Total Current Assets - Inventory - Prepaid Expenses)</h5>
+        <form>
+            <h4>Total Quick Assets?</h4>
+            <input type="number" id="QuickAssets"=></input><br>
+            <h4>Total Current Liabilities?</h4>
+            <input type="number" id="CurrentLiabilities"=></input>
+        </form>
+      <p>The quick ratio is :
+      <span id = "QUICKRATIO"></span>
+        <button onclick="quickRatio(QuickAssets,CurrentLiabilities)">Submit</button>
+      </section>
+
+      <section id = "operatingCASHFLOW">
+      <h3>Operating Cash Flow Ratio</h3>
+      <h4>Operating Cash Flow = Cash Flow From Operations / Current Liabilities</h4>
+        <form>
+            <h4>Cash Flow From Operations?</h4>
+            <input type="number" id="cashFlowOperations"=></input><br>
+            <h4>Total Current Liabilities?</h4>
+            <input type="number" id="currentliabilities"=></input>
+        </form>
+      <p>The quick ratio is :
+      <span id = "OPERATINGCASHFLOW"></span>
+        <button onclick="operatingCashflow(cashFlowOperations,currentliabilities)">Submit</button>
+      </section>
+
+
+
+
+    <script>
+        function currentRatio()
+        {
+          ca = document.getElementById("currentAssets").value;
+          cl = document.getElementById("currentLiabilities").value;
+          document.getElementById("CURRENTRATIO").innerHTML = ca / cl;
+        }
+        function quickRatio(){
+          qa = document.getElementById("QuickAssets").value;
+          cLi = document.getElementById("CurrentLiabilities").value;
+          document.getElementById("QUICKRATIO").innerHTML = qa / cLi
+        }
+        function workingCapital(){
+          cA = document.getElementById("CurrentAssets").value;
+          cL = document.getElementById("currentlIabilities").value;
+          document.getElementById("WORKINGCAPITAL").innerHTML = cA - cL
+        }
+        function operatingCashflow(){
+          cfo = document.getElementById("cashFlowOperations").value;
+          cl = document.getElementById("currentliabilities").value;
+          document.getElementById("OPERATINGCASHFLOW").innerHTML = cfo / cl
+        }
+
+    </script>
+
+</body>
+</html>

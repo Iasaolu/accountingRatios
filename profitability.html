@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- need to do return on capital employed--!>
+<html>
+<head id = "profitability">
+  <table>
+      <tr>
+        <a href= "./homepage.html"<td>Home</td></a>
+      </tr>
+    </table>
+  <h1>Profitability Ratios</h1>
+</head>
+<body>
+
+  <section id="GrossProfitRATIO">
+  <h3>Gross Profit Ratio</h3>
+  <h4>Gross Profit Ratio = Gross Profit / Net Sales<h5>
+    <form>
+        <h4>Gross Profit?</h4>
+        <input type="number" id="grossProfit"=></input><br>
+        <h4>Net Sales?</h4>
+        <input type="number" id="netSales" => </input>
+    </form>
+  <p>The Gross Profit Ratio is :
+  <span id = "GROSSPROFITRATIO"></span>
+    <button onclick="grossprofitRatio(grossProfit,netSales)">Submit</button>
+  </section>
+
+  <section id="NetProfitRATIO">
+  <h3>Net Profit Ratio</h3>
+  <h4>Net Profit Ratio = Net Profit / Net Sales<h5>
+    <form>
+        <h4>Net Profit?</h4>
+        <input type="number" id="netProfit"=></input><br>
+        <h4>Net Sales?</h4>
+        <input type="number" id="NetSales" => </input>
+    </form>
+  <p>The Net Profit Ratio is :
+  <span id = "NETPROFITRATIO"></span>
+    <button onclick="netprofitRatio(netProfit,NetSales)">Submit</button>
+  </section>
+
+  <section id="OperatingProfitRATIO">
+  <h3>Operating Profit Ratio</h3>
+  <h4>Operating Profit Ratio = Operating Profit / Net Sales<h5>
+    <form>
+        <h4>Operating Profit?</h4>
+        <input type="number" id="operatingProfit"=></input><br>
+        <h4>Net Sales?</h4>
+        <input type="number" id="nEtSales" => </input>
+    </form>
+  <p>The Operating Profit Ratio is :
+  <span id = "OPERATINGPROFIT"></span>
+    <button onclick="operatingprofitRatio(operatingProfit,nEtSales)">Submit</button>
+  </section>
+
+  <section id="OperatingRATIO">
+  <h3>Operating Ratio</h3>
+  <h4>Operating Ratio = (Operating Expenses + Cost Of Goods Sold) / Net Sales<h5>
+    <form>
+        <h4>Operating Expenses?</h4>
+        <input type="number" id="operatingExpenses"=></input><br>
+        <h4>Cost of Goods Sold?</h4>
+        <input type="number" id="CGS" => </input>
+        <h4>Net Sales?</h4>
+        <input type="number" id="neTSales" => </input>
+    </form>
+  <p>The Operating Ratio is :
+  <span id = "OPERATINGRATIO"></span>
+    <button onclick="operatingRatio(operatingExpenses,CGS,neTSales)">Submit</button>
+  </section>
+
+  <section id="PriceToEarningsRATIO">
+  <h3>Price to Earnings Ratio</h3>
+  <h4>Price to Earnings Ratio = Share Price / Earnings per Share (EPS)<h5>
+    <form>
+        <h4>Share Price?</h4>
+        <input type="number" id="SharePrice"=></input><br>
+        <h4>Earnings per Share(EPS)?</h4>
+        <input type="number" id="EPS" => </input>
+    </form>
+  <p>The Price to Earnings Ratio is :
+  <span id = "PERATIO"></span>
+    <button onclick="pesRatio(SharePrice,EPS)">Submit</button>
+  </section>
+
+
+
+    <script>
+        function grossprofitRatio()
+        {
+          gp = document.getElementById("grossProfit").value;
+          ns = document.getElementById("netSales").value;
+          document.getElementById("GROSSPROFITRATIO").innerHTML = gp / ns;
+        }
+
+        function netprofitRatio()
+        {
+          np = document.getElementById("netProfit").value;
+          nS = document.getElementById("NetSales").value;
+          document.getElementById("NETPROFITRATIO").innerHTML = np / nS;
+        }
+
+        function operatingprofitRatio()
+        {
+          op = document.getElementById("operatingProfit").value;
+          netS = document.getElementById("nEtSales").value;
+          document.getElementById("OPERATINGPROFIT").innerHTML = op / netS;
+        }
+
+        function operatingRatio()
+        {
+          oe = document.getElementById("operatingExpenses").value;
+          cgs = document.getElementById("CGS").value;
+          nEtS = document.getElementById("neTSales").value;
+          document.getElementById("OPERATINGRATIO").innerHTML = (oe/nEtS) + (cgs/nEtS);
+        }
+
+        function pesRatio()
+        {
+          sp = document.getElementById("SharePrice").value;
+          eps = document.getElementById("EPS").value;
+          document.getElementById("PERATIO").innerHTML = sp/eps;
+        }
+
+
+    </script>
+</html>
